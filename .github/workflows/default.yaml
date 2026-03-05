@@ -24,7 +24,7 @@ on:
     branches:
       - 'main'
     tags:
-      - 'v\d+.\d+-\d+'
+      - 'v\d+.\d+.\d+'
 
 env:
   IMAGE_REPOSITORY: eajkseajks
