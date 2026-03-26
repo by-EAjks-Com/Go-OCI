@@ -14,7 +14,7 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-FROM golang:1.26.0
+FROM golang:1.26.1
 
 LABEL maintainer="by-EAjks.Com <Contact@by-EAjks.Com>"
 
@@ -28,6 +28,7 @@ ENV GONOSUMCHECK="*"
 WORKDIR /go-offline
 
 RUN go mod init go-offline \
+ && go get github.com/urfave/cli/v2@v2.27.7 \
  && go get github.com/spf13/cobra@v1.10.2 \
  && go get github.com/spf13/viper@v1.21.0 \
  && go get go.uber.org/zap@v1.27.1 \

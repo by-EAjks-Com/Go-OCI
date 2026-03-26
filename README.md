@@ -10,14 +10,16 @@ Derive the packages to download from the packages of interest
 docker run `
   --interactive `
   --tty `
+  --rm `
   --name go-oci `
-  docker.io/golang:1.26.0
+  docker.io/golang:1.26.1
 ```
 
 ```bash
 cd $HOME
 go mod init go-modules
 #
+go get github.com/urfave/cli/v2
 go get github.com/spf13/cobra
 go get github.com/spf13/viper
 #
